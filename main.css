@@ -1,0 +1,107 @@
+/* Reset some default styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height */
+}
+
+h1, p, video {
+    margin: 0;
+    padding: 0;
+}
+
+/* All-black color theme */
+:root {
+    --background-color: #000000; /* Black */
+    --text-color: #FFFFFF; /* White */
+}
+
+/* Full-screen black background */
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Netflix Sans', Arial, sans-serif;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex-grow: 1; /* Allows container to fill the screen */
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+.title {
+    font-size: 2em;
+}
+
+/* New classes for different color parts of the title */
+.title-red {
+    color: #E50914; /* Netflix red */
+}
+
+.title-white {
+    color: var(--text-color); /* White */
+}
+
+main {
+    flex-grow: 1; /* Fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+.video {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Center video horizontally */
+}
+
+.lorem-text {
+    padding: 20px;
+    max-width: 600px; /* Limits the maximum width for better readability */
+    margin: 0 auto; /* Centers the content */
+    text-align: left;
+}
+
+/* Spotify button styles adjusted for Netflix theme */
+.spotify-button {
+    background-color: #E50914; /* Netflix red */
+    color: white; /* White text */
+    border: 2px solid transparent; /* Add a border for better visibility */
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    font-family: 'Netflix Sans', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.spotify-button:hover,
+.spotify-button:focus,
+.spotify-button:active {
+    background-color: white; /* White background on hover/click */
+    color: #E50914; /* Netflix red text on hover/click */
+    /* border-color: #E50914; Border color to match text */
+}
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+    }
+    .lorem-text {
+        font-size: 0.9em;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .lorem-text {
+        padding: 5px; /* Further reduces padding for very small screens */
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We're Never Gonna Give You Up</title>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        @font-face {
+            font-family: 'Netflix Sans';
+            src: url('./NetflixSans-Medium.otf') format('opentype');
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">
+                <span class="title-red">We're Never Gonna </span>
+                <span class="title-white">Give You </span>
+                <span class="title-red">Up</span>
+            </h1>
+        </header>
+        <main>
+            <video id="video" class="video" autoplay muted>
+                <source src="./rickroll.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="lorem-text">
+                <p>You just got rickrolled :)</p>
+                <!-- Spotify button -->
+                <button onclick="window.open('https://www.spotify.com', '_blank')" class="spotify-button">A Little Gift for You...</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript to unmute the video when the user clicks anywhere on the website
+        console.log("a little something by the greatest IT Head that ever lived...")
+        const video = document.getElementById('video');
+
+        document.body.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+            }
+        });
+    </script>
+</body>
+</html>
